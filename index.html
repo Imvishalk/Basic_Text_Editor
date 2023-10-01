@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeClause - Basic Text Editor</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+    <section>
+        <div class="row">
+            <div class="col">
+                <div class="box first">
+                    <input id="font-size" type="number" value="16" min="1" max="100" onchange="changeFontSize(this)">
+                </div>
+                <div class="box second">
+                    <button type="button" onclick="toggleBold()">
+                        <i class="fa-solid fa-bold"></i>
+                    </button>
+                    <button type="button" onclick="toggleItalic()">
+                        <i class="fa-solid fa-italic"></i>
+                    </button>
+                    <button type="button" onclick="toggleUnderline()">
+                        <i class="fa-solid fa-underline"></i>
+                    </button>
+                </div>
+                <div class="box third">
+                    <button type="button" onclick="alignLeft()">
+                        <i class="fa-solid fa-align-left"></i>
+                    </button>
+                    <button type="button" onclick="alignCenter()">
+                        <i class="fa-solid fa-align-center"></i>
+                    </button>
+                    <button type="button" onclick="alignRight()">
+                        <i class="fa-solid fa-align-right"></i>
+                    </button>
+                </div>
+                <div class="box fourth">
+                    <button type="button" onclick="changeCase()">
+                        aA
+                    </button>
+                    <button type="button" onclick="clearText()">
+                        <i class="fa-solid fa-text-slash"></i>
+                    </button>
+                    <input type="color" onchange="changeTextColor(this)">
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col">
+                <textarea id="textarea1" placeholder="Your text here"></textarea>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
